@@ -7,7 +7,7 @@ public class Ex05 {
         for (int i = 0; i < 100; i++) {
 
             //  💡 continue : 한 루프만 건너뜀
-            if (i % 3 == 0) continue;
+            if (i % 3 == 0) continue; //  100보다 작은 3의 배수들 출력해보기
 
             //  💡 break : 블록 전체를 종료
             if (i == 10) break;
