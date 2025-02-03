@@ -70,8 +70,8 @@ public class Main {
                         int gachaGoCount = 1;
 
                         while (true) {
-                        randomGachaNum = random.nextInt(gachaList.length);
-                        thisGacha = gachaList[random.nextInt(randomGachaNum)];
+                            randomGachaNum = random.nextInt(gachaList.length);
+                            thisGacha = gachaList[random.nextInt(randomGachaNum)];
 
                             if (!wishGacha.equals(thisGacha)) {
                                 System.out.printf("%s가 나왔습니다! 다시 돌립니다. . .\n", thisGacha);
