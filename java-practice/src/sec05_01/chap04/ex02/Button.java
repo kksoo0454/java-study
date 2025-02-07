@@ -1,8 +1,6 @@
 package sec05_01.chap04.ex02;
 
-public class Button {
-
-    public class button {
+    public class Button {
         private static String mode = "LIGHT";
 
         public static void switchMode() {
@@ -12,12 +10,13 @@ public class Button {
         private char print;
         private int space;
 
-        public button(char print, int space) {
+        public Button(char print, int space) {
             this.print = print;
             this.space = space;
         }
 
         public void setSpace(int space) {
+            if (space < 1 || space > 4) return;
             this.space = space;
         }
 
@@ -26,4 +25,3 @@ public class Button {
                     .formatted(print, space * 4096);
         }
     }
-}
