@@ -5,11 +5,12 @@ public class YalcoCafe extends YalcoGroup {
         return (CREED.formatted("원두향은"));
     }
 
-    protected static int lastNo = 0;
+    protected static int lastNo = 1;
     public boolean isTakeout;
 
     public YalcoCafe(String name, boolean isTakeout) {
         super(lastNo, name);
+        lastNo++;
         this.isTakeout = isTakeout;
     }
 

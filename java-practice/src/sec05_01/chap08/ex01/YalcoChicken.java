@@ -4,10 +4,11 @@ public class YalcoChicken extends YalcoGroup {
     public static String getCREED() {
         return CREED.formatted("튀김옷은");
     }
-    protected static int lastNo = 0;
+    protected static int lastNo = 1;
 
     public YalcoChicken(String name) {
         super(lastNo, name);
+        lastNo ++;
     }
 
     @Override
