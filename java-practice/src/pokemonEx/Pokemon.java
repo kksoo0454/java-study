@@ -10,8 +10,8 @@ public class Pokemon {
 
     protected int level = 1;
 
-    protected String name;
-    protected String type;
+    protected static String name;
+    protected static String type;
 
     protected int hp;
     protected int attack;

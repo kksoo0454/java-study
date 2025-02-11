@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+
         Pokemon[] pokemons = {
                 new Pikachu(),
                 new Bulbasaur(),
@@ -12,21 +12,17 @@ public class Main {
                 new Squirtle()
         };
 
-        Pokemon[] myPokemon;
+        Scanner scan = new Scanner(System.in);
 
-        System.out.println("어떤 포켓몬을 데려갈거니?");
-        for (Pokemon pokemon : pokemons) {
-            System.out.println(pokemon.name);
-        }
-
-        String sanner = scanner.nextLine();
-        for (Pokemon pokemon : pokemons) {
-            if (pokemon.name.equals(sanner)) {
-            } else {
-                System.out.println("다시 골라주렴"); break;
+        for (int i = 0; i < pokemons.length; i++) {
+            if (pokemons[i].name.equals(scan)) {
+                MyPokemon myPokemon = new MyPokemon(pokemons[i]);
             }
         }
 
-//        System.out.printf("고른 포켓몬은 %s!", myPokemon.name);
+
+
+
+
     }
 }
