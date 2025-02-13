@@ -25,6 +25,7 @@ public abstract class Pokemon {
         this.type = type;
     }
 
+    // 배틀 중 공격 메소드
     void attack(Pokemon enemy) {
         System.out.printf("%s의 공격!\n", name);
         System.out.printf("%s의 타입은 %s이고 %s의 타입은 %s이다!\n",
@@ -40,4 +41,23 @@ public abstract class Pokemon {
     }
 
 
-}
+    // 배틀 메소드
+    static void battle() {
+        while (true) {
+                if (GameSystem.myPokemon.speed > GameSystem.battleNpc.pokemon.speed) {
+                    GameSystem.myPokemon.attack(GameSystem.battleNpc.pokemon);
+                    if (GameSystem.battleNpc.pokemon.hp <= 0) {
+                        System.out.println("배틀에서 이겼다!");
+                        GameSystem.getMoney();
+                        break;
+                    }
+                } else {
+                    GameSystem.battleNpc.pokemon.attack(GameSystem.myPokemon);
+                    if (GameSystem.myPokemon.hp <= 0) {
+                        System.out.println("당신은 눈앞이 캄캄해졌다. . .");
+                        break;
+                    }
+                }
+            }
+        }
+    }
