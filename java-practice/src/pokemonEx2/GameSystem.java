@@ -54,7 +54,7 @@ public class GameSystem {
 
     // 승리 시 용돈획득 메소드
     public static void getMoney() {
-        System.out.println("- - - - -");
+        battleNpc.givemoney();
         System.out.printf("와! %s에게 용돈 %d원을 받았다!\n",
                 battleNpc.name, battleNpc.money);
         System.out.println("- - - - -");
@@ -63,7 +63,6 @@ public class GameSystem {
     // 배틀 시작 알림 메소드
     public void startingBattle() {
         battleNpc = npcs[0];
-        System.out.println("- - - - -");
         System.out.printf("%s와 눈이 마주쳤다! 배틀시작!\n", battleNpc.name);
         System.out.println("- - - - -");
         Pokemon.battle();

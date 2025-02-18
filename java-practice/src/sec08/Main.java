@@ -1,6 +1,6 @@
 package sec08;
 
-import sec07.chap03.ex05.Knight;
+import sec07.chap04.*;
 
 import java.util.*;
 
@@ -82,33 +82,33 @@ public class Main {
 //        numbers.add("Hello"); // ⚠️ 불가
 
 //        knights.add(new Swordman(Side.BLUE)); // ⚠️ 불가
-//        knights.add(new Knight(Side.BLUE));
-//        knights.add(new MagicKnight(Side.RED));
+        knights.add(new Knight(Side.BLUE));
+        knights.add(new MagicKnight(Side.RED));
 
         // 와일드카드 적용
         // 기사 이상의 그룹으로만 편성될 수 있는 정예분대
         ArrayList<? extends Knight> eliteSquard;
 
 //        eliteSquad = new ArrayList<Swordman>(); // ⚠️ 불가
-//        eliteSquad = new ArrayList<Knight>();
-//        eliteSquad = new ArrayList<MagicKnight>();
+        eliteSquard = new ArrayList<Knight>();
+        eliteSquard = new ArrayList<MagicKnight>();
 
         //  ⭐️ 인스턴스 요소를 지울 때는 참조를 기준으로
         //  - 내용이 같다고 같은 인스턴스가 아님
-//        Knight knight1 = new Knight(Side.RED);
-//        knights.add(knight1);
-//
-//        //  요소가 하나 지워졌는지 여부 반환
-//        boolean removed1 = knights.remove(new Knight(Side.RED));
-//        boolean removed2 = knights.remove(knight1);
+        Knight knight1 = new Knight(Side.RED);
+        knights.add(knight1);
+
+        //  요소가 하나 지워졌는지 여부 반환
+        boolean removed1 = knights.remove(new Knight(Side.RED));
+        boolean removed2 = knights.remove(knight1);
 
         //  ⭐️ 둘의 차이와 연관지어 생각해 볼 것
 
-//        //  💡 ArrayList에만 있는 메소드들 중...
-//        ArrayList<Attacker> attackers = new ArrayList<>();
-//        //  자주 쓰이지는 않음
-//        attackers.ensureCapacity(5); // 자리수 미리 확보
-//        attackers.trimToSize(); // 남는 자리 없애기 (메모리 회수)
+        //  💡 ArrayList에만 있는 메소드들 중...
+        ArrayList<Attacker> attackers = new ArrayList<>();
+        //  자주 쓰이지는 않음
+        attackers.ensureCapacity(5); // 자리수 미리 확보
+        attackers.trimToSize(); // 남는 자리 없애기 (메모리 회수)
 
         //  💡 LinkedList에만 있는 메소드들 중...
         LinkedList<Integer> intNums = new LinkedList<>();

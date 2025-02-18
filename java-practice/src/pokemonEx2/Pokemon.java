@@ -48,6 +48,7 @@ public abstract class Pokemon {
                     GameSystem.myPokemon.attack(GameSystem.battleNpc.pokemon);
                     if (GameSystem.battleNpc.pokemon.hp <= 0) {
                         System.out.println("배틀에서 이겼다!");
+                        System.out.println("- - - - -");
                         GameSystem.getMoney();
                         break;
                     }
@@ -55,6 +56,7 @@ public abstract class Pokemon {
                     GameSystem.battleNpc.pokemon.attack(GameSystem.myPokemon);
                     if (GameSystem.myPokemon.hp <= 0) {
                         System.out.println("당신은 눈앞이 캄캄해졌다. . .");
+                        System.out.println("- - - - -");
                         break;
                     }
                 }
