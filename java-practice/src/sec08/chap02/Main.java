@@ -1,4 +1,4 @@
-package sec08;
+package sec08.chap02;
 
 import sec07.chap04.*;
 
